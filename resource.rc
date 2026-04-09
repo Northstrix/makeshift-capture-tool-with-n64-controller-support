@@ -1,0 +1,46 @@
+// resource.rc — Makeshift Capture Tool resources
+// Place this file in the same folder as makeshift_capture.cpp
+// Place logo.ico (converted from logo.png) in the same folder
+//
+// To convert logo.png to logo.ico you can use:
+//   magick logo.png -resize 256x256 logo.ico
+// or use any PNG→ICO converter and save as logo.ico with 16x16+32x32+48x48+256x256 sizes
+
+#include <windows.h>
+
+// Application icon — embedded into the .exe (appears in Explorer, taskbar, alt-tab)
+IDI_APPICON ICON "logo.ico"
+
+// PNG resource for the in-app about page logo blit
+// (the C code loads this as resource ID 100, type "PNG")
+100 PNG "logo.png"
+
+// Version info
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION     1,0,0,0
+PRODUCTVERSION  1,0,0,0
+FILEFLAGSMASK   VS_FFI_FILEFLAGSMASK
+FILEFLAGS       0
+FILEOS          VOS_NT_WINDOWS32
+FILETYPE        VFT_APP
+FILESUBTYPE     VFT2_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName",      "Maxim Bortnikov"
+            VALUE "FileDescription",  "Makeshift Capture Tool with N64 Controller Support"
+            VALUE "FileVersion",      "1.0.0.0"
+            VALUE "InternalName",     "MakeshiftCapture"
+            VALUE "LegalCopyright",   "Copyright (c) 2026 Maxim Bortnikov"
+            VALUE "OriginalFilename", "MakeshiftCaptureTool.exe"
+            VALUE "ProductName",      "Makeshift Capture Tool with N64 Controller Support"
+            VALUE "ProductVersion",   "1.0.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0409, 0x04B0
+    END
+END
