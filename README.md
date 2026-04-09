@@ -1,2 +1,2 @@
-# makeshift-capture-tool-with-n64-controller-support
+# Makeshift Capture Tool with N64 Controller Support
 Screenshot capture tool with N64 controller support for Windows.
